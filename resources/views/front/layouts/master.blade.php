@@ -29,19 +29,16 @@
 
         <div class="lg:w-1/4">
             @include('front.layouts._partials.newsletter')
-            @include('front.layouts._partials.larajobs')
-            @include('front.layouts._partials.carbon')
         </div>
 
 
     </div>
 
     <footer class="px-4 mx-auto border-t py-6 mt-6 text-center text-sm sm:text-base">
-        <a href="https://twitter.com/freekmurze">@freekmurze</a>
+        <a href="https://twitter.com/twocngdagz">@twocngdagz</a>
         &nbsp; • &nbsp;
         <a href="/feed" data-turbolinks="false">RSS</a>
-        &nbsp; • &nbsp;
-        <a href="/advertising">Advertising</a>
+        &nbsp;
     </footer>
 </div>
 </body>

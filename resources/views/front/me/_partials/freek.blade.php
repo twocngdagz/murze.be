@@ -5,7 +5,7 @@
              src="/images/avatar-boxed.jpg">
 
         <div class="text-center sm:text-left">
-            <p class="md:text-3xl text-black">Hi there! I am Freek Van der Herten, a partner & developer at <a href="https://spatie.be">Spatie</a>.
+            <p class="md:text-3xl text-black">Hi there! I am Mederic Roy Beldia, a Laravel Developer and Python hobbyist!</a>.
             </p>
         </div>
     </div>
