@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     @include('feed::links')
-    <title>@yield('title') - Freek Van der Herten's blog on PHP and Laravel</title>
+    <title>@yield('title') - Mederic Roy Beldia blog on Laravel & Python</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     @include('front.layouts._partials.seo')
