@@ -34,7 +34,7 @@
 @endsection
 
 @section('seo')
-    <meta property="og:title" content="{{ $post->title }} | murze.be"/>
+    <meta property="og:title" content="{{ $post->title }} | medericroybeldia.co"/>
     <meta property="og:description" content="{{ $post->excerpt }}"/>
 
     @foreach($post->tags as $tag)
@@ -45,8 +45,8 @@
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description" content="{{ $post->excerpt }}"/>
-    <meta name="twitter:title" content="{{ $post->title }} | murze.be"/>
-    <meta name="twitter:site" content="@freekmurze"/>
-    <meta name="twitter:image" content="https://murze.be/images/avatar-boxed.jpg"/>
-    <meta name="twitter:creator" content="@freekmurze"/>
+    <meta name="twitter:title" content="{{ $post->title }} | medericroybeldia.co"/>
+    <meta name="twitter:site" content="@twocngdagz"/>
+    <meta name="twitter:image" content="https://medericroybeldia.co/images/avatar-boxed.jpg"/>
+    <meta name="twitter:creator" content="@twocngdagz"/>
 @endsection

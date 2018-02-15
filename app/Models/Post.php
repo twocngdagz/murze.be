@@ -203,7 +203,7 @@ class Post extends BaseModel implements Feedable
             ->summary($this->text)
             ->updated($this->updated_at)
             ->link(url(action('Front\PostsController@detail', $this->slug)))
-            ->author('Freek Van der Herten');
+            ->author('Mederic Roy F. Beldia');
     }
 
     public function concernsTweet(): bool

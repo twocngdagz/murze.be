@@ -12,7 +12,7 @@
         "@type":"WebSite",
         "@id":"#website",
         "url":"https:\/\/medericroybeldia.co\/",
-        "name":"murze.be",
+        "name":"medericroybeldia.co",
         "alternateName":"A blog for Laravel and Python Hobbyist"
     }
 </script>

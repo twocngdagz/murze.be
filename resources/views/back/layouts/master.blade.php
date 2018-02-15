@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin | murze.be</title>
+    <title>Admin | medericroybeldia.co</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/back.css') }}" rel="stylesheet">
