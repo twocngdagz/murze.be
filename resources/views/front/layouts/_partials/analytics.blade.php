@@ -1,7 +1,7 @@
 @if(app()->environment('production'))
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57290920-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114200159-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
