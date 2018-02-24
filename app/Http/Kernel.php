@@ -38,7 +38,11 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Turbolinks::class,
             \App\Http\Middleware\SecureProtocol::class,
-            \Spatie\Csp\AddCspHeaders::class
+            \Spatie\Csp\AddCspHeaders::class,
+            \App\Http\Middleware\XSSProtectionHeader::class,
+            \App\Http\Middleware\XContentTypeOptionsHeader::class,
+            \App\Http\Middleware\StrictTransportSecurity::class,
+            \App\Http\Middleware\XFrameOptions::class,
         ],
 
         'api' => [
