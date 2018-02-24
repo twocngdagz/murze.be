@@ -7,7 +7,7 @@
             <h1 class="p-0 text-grey-darker">Edit Post</h1>
             <a class="bg-blue text-sm text-white hover:text-grey-light py-2 px-3 font-medium rounded-lg" target="_blank" href="{{ $post->url }}">Preview</a>
         </div>
-        <form class="mx-8" method="POST" action="{{ action('Back\PostsController@update', $post->id) }}">
+        <form class="mx-8" method="POST" action="{{ action('Back\PostsController@update', $post->id) }}" nonce="{{ cspNonce() }}">
             <input type="hidden" name="_method" value="PATCH">
 
             @include('back.posts._partials.form', ['submitText' => 'Update'])

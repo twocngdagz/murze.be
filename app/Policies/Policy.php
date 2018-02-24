@@ -13,6 +13,7 @@ class Policy extends BasePolicy
         return $this
             ->addDirective(Directive::BASE, 'self')
             ->addDirective(Directive::CONNECT, 'self')
+            ->addDirective(Directive::CONNECT, 'cdn.jsdelivr.net')
             ->addDirective(Directive::DEFAULT, 'self')
             ->addDirective(Directive::FORM_ACTION, 'self')
             ->addDirective(Directive::IMG, 'self')
@@ -25,6 +26,7 @@ class Policy extends BasePolicy
             ->addDirective(Directive::SCRIPT, '*.google-analytics.com')
             ->addDirective(Directive::SCRIPT, 'fonts.googleapis.com')
             ->addDirective(Directive::STYLE, 'fonts.googleapis.com')
+            ->addDirective(Directive::STYLE, 'maxcdn.bootstrapcdn.com')
             ->addDirective(Directive::SCRIPT, '*.googletagmanager.com')
             ->addDirective(Directive::FONT, 'fonts.gstatic.com')
             ->addDirective(Directive::FONT, 'data:')
