@@ -2,7 +2,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114200159-1"></script>
-    <script>
+    <script nonce="{{ cspNonce() }}">
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
