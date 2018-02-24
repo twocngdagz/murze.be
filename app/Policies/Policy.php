@@ -16,6 +16,7 @@ class Policy extends BasePolicy
             ->addDirective(Directive::DEFAULT, 'self')
             ->addDirective(Directive::FORM_ACTION, 'self')
             ->addDirective(Directive::IMG, 'self')
+            ->addDirective(Directive::IMG, '*.google-analytics.com')
             ->addDirective(Directive::MEDIA, 'self')
             ->addDirective(Directive::SCRIPT, 'self')
             ->addDirective(Directive::STYLE, 'self')
