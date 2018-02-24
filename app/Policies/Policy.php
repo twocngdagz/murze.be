@@ -27,6 +27,7 @@ class Policy extends BasePolicy
             ->addDirective(Directive::SCRIPT, 'fonts.googleapis.com')
             ->addDirective(Directive::STYLE, 'fonts.googleapis.com')
             ->addDirective(Directive::STYLE, 'maxcdn.bootstrapcdn.com')
+            ->addDirective(Directive::FONT, 'maxcdn.bootstrapcdn.com')
             ->addDirective(Directive::SCRIPT, '*.googletagmanager.com')
             ->addDirective(Directive::FONT, 'fonts.gstatic.com')
             ->addDirective(Directive::FONT, 'data:')
