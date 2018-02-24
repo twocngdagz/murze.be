@@ -24,6 +24,7 @@ class Policy extends BasePolicy
             ->addDirective(Directive::SCRIPT, '*.google-analytics.com')
             ->addDirective(Directive::SCRIPT, 'fonts.googleapis.com')
             ->addDirective(Directive::STYLE, 'fonts.googleapis.com')
+            ->addDirective(Directive::SCRIPT, '*.googletagmanager.com')
             ->addDirective(Directive::FONT, 'fonts.gstatic.com')
             ->addDirective(Directive::FONT, 'data:')
             ->addNonceForDirective(Directive::SCRIPT)
