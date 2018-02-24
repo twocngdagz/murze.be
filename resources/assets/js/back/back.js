@@ -12,3 +12,10 @@ if (editors.length) {
         },
     });
 }
+
+document.getElementById('link-logout').addEventListener("click", logout)
+
+function logout() {
+    event.preventDefault();
+    document.getElementById('logout-form').submit();
+}
