@@ -2,10 +2,10 @@
 require __DIR__.'/vendor/autoload.php';
 (new \Dotenv\Dotenv(__DIR__, '.env'))->load();
 
-$server = "murze.be";
-$userAndServer = 'forge@'. $server;
-$repository = "spatie/murze.be";
-$baseDir = "/home/forge/murze.be";
+$server = "www.medericroybeldia.co";
+$userAndServer = 'roy@'. $server;
+$repository = "twocngdagz/murze.be";
+$baseDir = "/home/roy/medericroybeldia.co";
 $releasesDir = "{$baseDir}/releases";
 $persistentDir = "{$baseDir}/persistent";
 $currentDir = "{$baseDir}/current";
@@ -51,6 +51,14 @@ git pull origin master
 [ -d {{ $persistentDir }} ] || mkdir {{ $persistentDir }};
 [ -d {{ $persistentDir }}/uploads ] || mkdir {{ $persistentDir }}/uploads;
 [ -d {{ $persistentDir }}/storage ] || mkdir {{ $persistentDir }}/storage;
+[ -d {{ $persistentDir }}/storage/app ] || mkdir {{ $persistentDir }}/storage/app;
+[ -d {{ $persistentDir }}/storage/app/public ] || mkdir {{ $persistentDir }}/storage/app/public;
+[ -d {{ $persistentDir }}/storage/framework ] || mkdir {{ $persistentDir }}/storage/framework;
+[ -d {{ $persistentDir }}/storage/framework/cache ] || mkdir {{ $persistentDir }}/storage/framework/cache;
+[ -d {{ $persistentDir }}/storage/framework/sessions ] || mkdir {{ $persistentDir }}/storage/framework/sessions;
+[ -d {{ $persistentDir }}/storage/framework/testing ] || mkdir {{ $persistentDir }}/storage/framework/testing;
+[ -d {{ $persistentDir }}/storage/framework/views ] || mkdir {{ $persistentDir }}/storage/framework/views;
+[ -d {{ $persistentDir }}/storage/logs ] || mkdir {{ $persistentDir }}/storage/logs;
 cd {{ $releasesDir }};
 
 # Create the release dir
@@ -131,21 +139,19 @@ php artisan migrate --force;
 ln -nfs {{ $newReleaseDir }} {{ $currentDir }};
 cd {{ $newReleaseDir }}
 
-php artisan horizon:terminate
 php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
 php artisan responsecache:flush
 
-sudo service php7.1-fpm restart
-sudo supervisorctl restart all
+sudo service php7.1-fpm reload
 @endtask
 
 @task('cleanOldReleases', ['on' => 'remote'])
 {{ logMessage("🚾  Cleaning up old releases…") }}
 # Delete all but the 5 most recent.
 cd {{ $releasesDir }}
-ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" sudo chown -R forge .;
+ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" sudo chown -R roy .;
 ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" rm -rf;
 @endtask
 
@@ -163,4 +169,9 @@ php artisan config:cache
 php artisan responsecache:flush
 sudo supervisorctl restart all
 sudo service php7.1-fpm restart
+@endtask
+
+
+@task('test', ['on' => 'remote'])
+    sudo service php7.1-fpm reload
 @endtask
