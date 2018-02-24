@@ -43,6 +43,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\XContentTypeOptionsHeader::class,
             \App\Http\Middleware\StrictTransportSecurity::class,
             \App\Http\Middleware\XFrameOptions::class,
+            \App\Http\Middleware\ReferrerPolicy::class
         ],
 
         'api' => [
