@@ -5,7 +5,7 @@
             Logout
         </a>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;" nonce="{{ cspNonce() }}">
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden" }}">
             {{ csrf_field() }}
         </form>
     </li>
