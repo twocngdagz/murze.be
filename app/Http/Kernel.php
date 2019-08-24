@@ -37,7 +37,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Turbolinks::class,
-            // \App\Http\Middleware\SecureProtocol::class,
+            \App\Http\Middleware\SecureProtocol::class,
             \Spatie\Csp\AddCspHeaders::class,
             \App\Http\Middleware\XSSProtectionHeader::class,
             \App\Http\Middleware\XContentTypeOptionsHeader::class,
