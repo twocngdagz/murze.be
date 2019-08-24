@@ -44,7 +44,7 @@ class PostsController extends Controller
 
         flash()->success('Post updated');
 
-        return back();
+        return redirect()->action('Back\PostsController@edit', $post->id);
     }
 
     public function destroy(Post $post)
@@ -53,6 +53,6 @@ class PostsController extends Controller
 
         flash()->success('The post was deleted');
 
-        return back();
+        return redirect()->action('Back\PostsController@index');
     }
 }
